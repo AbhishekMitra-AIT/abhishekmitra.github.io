@@ -24,11 +24,12 @@ e. Others
 
 /* ------------------------------------------------------------------ */
 /* a. Webfonts and Icon fonts
- ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
 
 @import url("fonts.css");
 @import url("fontello/css/fontello.css");
 @import url("font-awesome/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
 
 /* ------------------------------------------------------------------
 /* b. Reset
@@ -143,14 +144,14 @@ html {
 
 body {
    background: #fff;
-   font-family: 'opensans-regular', sans-serif;
+   font-family: 'Roboto', 'opensans-regular', sans-serif;
    font-weight: normal;
-   font-size: 15px;
-   line-height: 30px;
-	color: #838C95;
-
+   font-size: 16px;
+   line-height: 1.8;
+   color: #5a6674;
+   
    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-	-webkit-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
 }
 
 /*  2. Typography
@@ -158,9 +159,9 @@ body {
 --------------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-   color: #313131;
-	font-family: 'opensans-bold', sans-serif;
-   font-weight: normal;
+   color: #2d3142;
+   font-family: 'Poppins', 'opensans-bold', sans-serif;
+   font-weight: 600;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 h1 { font-size: 38px; line-height: 42px; margin-bottom: 12px; letter-spacing: -1px; }
@@ -288,14 +289,17 @@ hr { border: solid #E3E3E3; border-width: 1px 0 0; clear: both; margin: 11px 0 3
 a, a:visited {
    text-decoration: none;
    outline: 0;
-   color: #11ABB0;
-
-   -webkit-transition: color .3s ease-in-out;
-   -moz-transition: color .3s ease-in-out;
-   -o-transition: color .3s ease-in-out;
-   transition: color .3s ease-in-out;
+   color: #4b6cc1;
+   
+   -webkit-transition: all .3s ease-in-out;
+   -moz-transition: all .3s ease-in-out;
+   -o-transition: all .3s ease-in-out;
+   transition: all .3s ease-in-out;
 }
-a:hover, a:focus { color: #313131; }
+a:hover, a:focus { 
+   color: #e84a5f; 
+   text-decoration: underline;
+}
 p a, p a:visited { line-height: inherit; }
 
 
@@ -463,28 +467,32 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-   font: 16px/30px 'opensans-bold', sans-serif;
-   background: #11ABB0;
+   font-family: 'Poppins', 'opensans-bold', sans-serif;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 1.5;
+   background: #4b6cc1;
    display: inline-block;
-	text-decoration: none;
-   letter-spacing: 0;
+   text-decoration: none;
+   letter-spacing: 1px;
    color: #fff;
-	padding: 12px 20px;
-	margin-bottom: 18px;
+   padding: 14px 24px;
+   margin-bottom: 18px;
    border: none;
    cursor: pointer;
    height: auto;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 
-   -webkit-transition: all .2s ease-in-out;
-	-moz-transition: all .2s ease-in-out;
-	-o-transition: all .2s ease-in-out;
-	-ms-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out;
+   -webkit-transition: all .3s ease-in-out;
+   -moz-transition: all .3s ease-in-out;
+   -o-transition: all .3s ease-in-out;
+   -ms-transition: all .3s ease-in-out;
+   transition: all .3s ease-in-out;
 
-   -moz-border-radius: 3px;
-   -webkit-border-radius: 3px;
-   -khtml-border-radius: 3px;
-   border-radius: 3px;
+   -moz-border-radius: 4px;
+   -webkit-border-radius: 4px;
+   -khtml-border-radius: 4px;
+   border-radius: 4px;
 }
 
 .button:hover,
@@ -492,8 +500,10 @@ button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
-   background: #3d4145;
+   background: #e84a5f;
    color: #fff;
+   transform: translateY(-2px);
+   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .button:active,

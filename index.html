@@ -13,7 +13,7 @@
 
    <!-- Mobile Specific Metas
    ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 
 	<!-- CSS
     ================================================== -->
@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="css/layout.css">
    <link rel="stylesheet" href="css/media-queries.css">
    <link rel="stylesheet" href="css/magnific-popup.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
 
    <!-- Script
    ================================================== -->
@@ -153,17 +154,17 @@
    ================================================== -->
    <header id="home">
 
-      <nav id="nav-wrap">
+      <nav id="nav-wrap" role="navigation" aria-label="Main navigation">
 
          <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
 	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
 
          <ul id="nav" class="nav">
-            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-            <li><a class="smoothscroll" href="#about">About</a></li>
-	         <li><a class="smoothscroll" href="#resume">Resume</a></li>
+            <li class="current"><a class="smoothscroll" href="#home" aria-label="Home section">Home</a></li>
+            <li><a class="smoothscroll" href="#about" aria-label="About section">About</a></li>
+	         <li><a class="smoothscroll" href="#resume" aria-label="Resume section">Resume</a></li>
             
-            <!--<li><a class="smoothscroll" href="#contact">Contact</a></li>
+            <!--<li><a class="smoothscroll" href="#contact" aria-label="Contact section">Contact</a></li>
          </ul> <!-- end #nav -->
 
       </nav> <!-- end #nav-wrap -->
@@ -186,7 +187,7 @@
       </div>
 
       <p class="scrolldown">
-         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+         <a class="smoothscroll" href="#about" aria-label="Scroll down to About section"><i class="icon-down-circle"></i></a>
       </p>
 
    </header> <!-- Header End -->
@@ -200,7 +201,7 @@
 
          <div class="three columns">
 
-            <img class="profile-pic"  src="images/AM_image.jpg" alt="" />
+            <img class="profile-pic" src="images/AM_image.jpg" alt="Abhishek Mitra profile photo" loading="lazy" />
 
          </div>
 
@@ -230,7 +231,7 @@
 
                <div class="columns download">
                   <p>
-                     <a href="https://drive.google.com/file/d/1IF2nvwZEIF_Y2XZeB5nSm3TU18AeOkt6/view" target="_blank" class="button"><i class="fa fa-download"></i>Download Resume</a>
+                     <a href="https://drive.google.com/file/d/1IF2nvwZEIF_Y2XZeB5nSm3TU18AeOkt6/view" target="_blank" class="button" aria-label="Download Resume"><i class="fa fa-download"></i>Download Resume</a>
                   </p>
                </div>
 
@@ -421,15 +422,15 @@
          </div>
 
          <div class="nine columns main-col">
-			<button type="button"> Linux</button>
-			<button type="button">Bash</button>
-			<button type="button">C++14</button>
-			<button type ="button">Python</button>
-			<button type="button">Google Colab</button>
-			<button type="button">Tensorflow 2.x</button>
-			<button type="button">OpenCV 3.x and 4.x</button>
+			<button type="button" tabindex="0" aria-label="Skill: Linux"> Linux</button>
+			<button type="button" tabindex="0" aria-label="Skill: Bash">Bash</button>
+			<button type="button" tabindex="0" aria-label="Skill: C++14">C++14</button>
+			<button type="button" tabindex="0" aria-label="Skill: Python">Python</button>
+			<button type="button" tabindex="0" aria-label="Skill: Google Colab">Google Colab</button>
+			<button type="button" tabindex="0" aria-label="Skill: Tensorflow 2.x">Tensorflow 2.x</button>
+			<button type="button" tabindex="0" aria-label="Skill: OpenCV 3.x and 4.x">OpenCV 3.x and 4.x</button>
 			<!-- <button type="button">LaTeX</button> -->
-			<button type="button">Git and Github</button>
+			<button type="button" tabindex="0" aria-label="Skill: Git and Github">Git and Github</button>
 			</div> <!-- main-col end -->
 
       </div> <!-- End skills -->
@@ -566,7 +567,7 @@
                                                 <div id="divMain">
                                                    <div id='left-div' class="resume-content">
                                                       <img style='float:left; margin:0 1px;' width='340px;'
-                                                         class='img-fluid' src='images/unicorn_fullyautomatic.gif'>
+                                                         class='img-fluid' src='images/unicorn_fullyautomatic.gif' loading="lazy" alt="Unicorn Fully-automatic Robot">
                                                    </div>
                                                   <!-- <div id='right-div' class="resume-content">
                                                       <img style='float: right; margin:0 1px;' width='340px;'
@@ -599,11 +600,11 @@
                                                 <div id="divMain">
                                                    <div id='left-div' class="resume-content">
                                                       <img style='float:left; margin:0 1px;' width='340px;'
-                                                         class='img-fluid' src='images/train_rl.gif'>
+                                                         class='img-fluid' src='images/train_rl.gif' loading="lazy" alt="Training the robotic arm">
                                                    </div>
                                                    <div id='right-div' class="resume-content">
                                                       <img style='float: right; margin:0 1px;' width='340px;'
-                                                         class='img-fluid' src='images/basic_control.GIF'>
+                                                         class='img-fluid' src='images/basic_control.GIF' loading="lazy" alt="Basic control of robotic arm">
                                                    </div>
           
                                                 </div>
@@ -633,7 +634,7 @@
                                                 <div id="divMain">
                                                    <div id='left-div' class="resume-content">
                                                       <img style='float:left; margin:0 1px;' width='340px;'
-                                                         class='img-fluid' src='images/smc_demo.gif'>
+                                                         class='img-fluid' src='images/smc_demo.gif' loading="lazy" alt="Sliding Mode Controller Demo">
                                                    </div>
                                                    <!--div id='right-div' class="resume-content">
                                                       <img style='float: right; margin:0 1px;' width='340px;'
@@ -667,11 +668,11 @@
                                                 <div id="divMain">
                                                    <div id='left-div' class="resume-content">
                                                       <img style='float:left; margin:0 1px;' width='340px;'
-                                                         class='img-fluid' src='images/alpr.gif'>
+                                                         class='img-fluid' src='images/alpr.gif' loading="lazy" alt="Automatic License Plate Recognition">
                                                    </div>
                                                    <div id='right-div' class="resume-content">
                                                       <img style='float: right; margin:0 1px;' width='340px;'
-                                                         class='img-fluid' src='images/alpr_2.gif'>
+                                                         class='img-fluid' src='images/alpr_2.gif' loading="lazy" alt="License Plate Recognition Demo">
                                                   </div>
                                                 </div>
                                              </div>
@@ -698,7 +699,7 @@
                                                 <div id="divMain">
                                                    <div id='left-div' class="resume-content">
                                                       <img style='float:left; margin:0 1px;' width='340px;'
-                                                         class='img-fluid' src='images/sas.gif'>
+                                                         class='img-fluid' src='images/sas.gif' loading="lazy" alt="Smart Attendance System">
                                                    </div>
                                                    <!--div id='right-div' class="resume-content">
                                                       <img style='float: right; margin:0 1px;' width='440px;'
@@ -748,15 +749,15 @@
 
    <!-- Java Script
    ================================================== -->
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
+   <script type="text/javascript" src="js/jquery-migrate-3.3.2.min.js" defer></script>
 
-   <script src="js/jquery.flexslider.js"></script>
-   <script src="js/waypoints.js"></script>
-   <script src="js/jquery.fittext.js"></script>
-   <script src="js/magnific-popup.js"></script>
-   <script src="js/init.js"></script>
+   <script src="js/jquery.flexslider.js" defer></script>
+   <script src="js/waypoints.js" defer></script>
+   <script src="js/jquery.fittext.js" defer></script>
+   <script src="js/magnific-popup.js" defer></script>
+   <script src="js/init.js" defer></script>
 
 </body>
 
