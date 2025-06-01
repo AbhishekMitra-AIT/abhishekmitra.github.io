@@ -1,0 +1,95 @@
+**Abhishek Mitra**
+Bengaluru, KA, IN
++91-9405014732
+[abhishekmitra91@gmail.com](mailto:abhishekmitra91@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/abhishek-mitra-61098260/) | [GitHub](https://github.com/AbhishekMitra-AIT)
+
+---
+
+### **Professional Summary**
+
+Diligent and analytical engineering professional with 10+ years of experience across program analysis, operations support, and embedded software development. Proven expertise in coordinating cross-functional engineering projects, developing process automation pipelines, maintaining stakeholder communication, and driving continuous improvement through data-backed insights. Strong background in DevOps practices, data visualization, and collaborative team environments.
+
+---
+
+### **Core Competencies**
+
+* Program Coordination & Reporting
+* Data Analytics & Visualization (Google Sheets, GitHub Actions)
+* Engineering Operations Support
+* CI/CD Pipeline Automation
+* Stakeholder Communication
+* Embedded System Integration
+* Risk Assessment & Troubleshooting
+* Python, Shell Scripting, C/C++, Git, ROS2
+
+---
+
+### **Relevant Experience**
+
+**Staff Engineer - Software Development**
+*Vrisva Space Private Limited | Jan 2025 – Present*
+
+* Supported the engineering org through development and monitoring of automated CI/CD pipelines for OpenPilot using GitHub Actions.
+* Managed upstream pull requests, rebasing, rollback-safe updates, and collaborative version control.
+* Created and maintained trackers and dashboards for bug tracking, precision issues, and resolution planning.
+* Conducted real-time system validation using telemetry tools (PlotJuggler, Replay, Cabana) to improve feedback loops.
+* Led root cause analysis for system failures, documented findings, and coordinated fixes with distributed teams.
+* Engaged with internal/external stakeholders (e.g., ARDE, SLZ) to report progress and coordinate remote troubleshooting.
+* Organized technical documentation for acceptance testing, platform commissioning, and safety evaluations.
+
+**ARDE 6-DOF Stewart Platform Deployment (Client Site Project)**
+*April 2025 – May 2025*
+
+* Coordinated and led on-site setup and system validation at ARDE, including actuator synchronization, GUI development, and IMU integration.
+* Maintained a program tracker for precision testing and fault resolution timelines.
+* Shared observations and collaborated with internal leadership and client teams to ensure compliance and readiness.
+* Conducted risk assessment, safety matrix configuration, and remote debugging via AnyDesk.
+
+**Development Engineer - Robotics**
+*Aegeus Technologies Pvt Ltd | Mar 2023 – Dec 2024*
+
+* Developed and tested embedded systems for solar cleaning and warehouse robots, supporting operations and product improvement initiatives.
+* Managed online trackers for issue logging, spares forecasting, and O\&M records used across internal teams and field engineers.
+* Automated test scripts, firmware calibration routines, and created technical documentation for support and handover.
+
+**Project Specialist - Physical Security**
+*Amazon Seller Services Pvt Ltd | Apr 2019 – Apr 2022*
+
+* Supported project forecasts, cross-functional resource planning, and site execution for security systems in logistics warehouses.
+* Coordinated multiple stakeholders across functions (SLP Ops, Engineering, Vendors) for smooth delivery.
+
+**Project Manager & Ops Support Lead - Security Systems**
+*Reliance Jio Infocomm Ltd | Sep 2014 – Apr 2019*
+
+* Oversaw system commissioning, vendor management, and documentation of program execution across PAN-India data centers.
+
+---
+
+### **Education**
+
+**B.E. in Electronics & Telecommunication**
+Army Institute of Technology, University of Pune | 2014
+
+---
+
+### **Tools & Technologies**
+
+Python, Shell Scripts, GitHub, CI/CD, ROS2, Google Sheets, VS Code, Ubuntu, PLC Systems, AnyDesk, Discord, STM32CubeIDE, Arduino IDE, Thonny
+
+---
+
+### **Certifications & Courses**
+
+* ISO 9001:2015 Training (Feb 2025)
+* Automated and Connected Driving Challenges (RWTH Aachen University, edX)
+
+---
+
+### **Languages**
+
+English, Hindi, Bangla
+
+---
+
+*Available for relocation and remote opportunities.*
