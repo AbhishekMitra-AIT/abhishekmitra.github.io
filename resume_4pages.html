@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Mitra - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .resume-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        .sidebar {
+            width: 300px;
+            background: #2c3e50;
+            color: white;
+            padding: 30px 25px;
+        }
+        
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #7f8c8d;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            text-align: center;
+            color: #bdc3c7;
+        }
+        
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            font-size: 14px;
+            color: #bdc3c7;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #ecf0f1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .about-text {
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #bdc3c7;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+        
+        .contact-item i {
+            width: 20px;
+            margin-right: 10px;
+            color: #3498db;
+        }
+        
+        .skill-item {
+            background: #d0ebff; /* light blue */
+            color: #1a237e;      /* dark blue text for visibility */
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 15px;
+            font-size: 12px;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .skill-item::after {
+            content: '●';
+            color: #e67e22;
+            position: absolute;
+            right: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 30px 35px;
+        }
+        
+        .experience-section {
+            margin-bottom: 30px;
+        }
+        
+        .experience-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .job {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .job::before {
+            content: '●';
+            color: #3498db;
+            position: absolute;
+            left: -15px;
+            top: 5px;
+            font-size: 12px;
+        }
+        
+        .company {
+            color: #3498db;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        
+        .duration {
+            color: #7f8c8d;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+        
+        .job-description {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .job-description ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .job-description li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .job-description li::before {
+            content: '●';
+            color: #e67e22;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .key-projects {
+            margin-top: 15px;
+        }
+        
+        .key-projects h4 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .education {
+            background: #ecf0f1;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .education-title {
+            color: #3498db;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        
+        .writing-assistant {
+            background: #e67e22;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        .lang-hobby {
+            margin-top: 20px;
+        }
+        
+        .lang-hobby-item {
+            background: #34495e;
+            color: white;
+            padding: 6px 12px;
+            margin: 3px;
+            border-radius: 12px;
+            font-size: 12px;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .lang-hobby-item.add::after {
+            content: '+';
+            background: #e67e22;
+            color: white;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            position: absolute;
+            right: -8px;
+            top: -5px;
+        }
+        
+        .lang-hobby-item.minus::after {
+            content: '−';
+            background: #e67e22;
+            color: white;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            position: absolute;
+            right: -8px;
+            top: -5px;
+        }
+
+         /* Print styles: ensure printed content matches screen content */
+        @media print {
+            body {
+                background: white !important;
+            }
+            .resume-container {
+                box-shadow: none !important;
+                margin: 0 !important;
+                max-width: 100% !important;
+                min-height: 0 !important;
+            }
+            .sidebar {
+                background: #2c3e50 !important;
+                color: white !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .main-content {
+                background: white !important;
+                color: #333 !important;
+            }
+            .education {
+                background: #ecf0f1 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .skill-item {
+                background: #d0ebff !important;
+                color: #1a237e !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .lang-hobby-item {
+                background: #34495e !important;
+                color: white !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            /* Hide print button */
+            #print-btn, .print-btn {
+                display: none !important;
+            }
+            /* Remove margin for print button container */
+            .print-btn-container {
+                display: none !important;
+            }
+            a {
+                color: #3498db !important;
+                text-decoration: underline !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="sidebar">
+            <!-- <div class="profile-pic">
+                Select or drag picture
+            </div> -->
+            
+            <div class="name">Abhishek Mitra</div>
+            <div class="title">STAFF ENGINEER - SOFTWARE DEVELOPMENT</div>
+            
+            <div class="section-title">ABOUT ME</div>
+            <div class="about-text">
+                Dynamic and performance-driven Software Engineer with extensive expertise in software development, embedded systems, robotics, and project leadership. Adept at managing complex projects, integrating hardware-software solutions, and collaborating effectively with global teams. Strong track record in developing CI/CD pipelines, autonomous systems, motion control platforms, and process automation to deliver precise technical solutions. Strong analytical, technical skills and excellent interpersonal skills with a passion for driving operational efficiency and innovation in challenging environments.
+            </div>
+            
+            <div class="section-title">PERSONAL DETAILS</div>
+            <div class="contact-item">
+                <i>📍</i> Bengaluru, India
+            </div>
+            <div class="contact-item">
+                <i>✉️</i> abhishekmitra91@gmail.com
+            </div>
+            <div class="contact-item">
+                <i>📞</i> +919405014732
+            </div>
+            <div class="contact-item">
+                <i>
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="width:16px;vertical-align:middle;filter:invert(0.5);" />
+                </i>
+                <a href="https://www.linkedin.com/in/abhishek-mitra-61098260/" target="_blank" style="color:#3498db;text-decoration:none;">linkedin.com/in/abhishek-mitra-61098260</a>
+            </div>
+            <div class="contact-item">
+                <i>
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" style="width:16px;vertical-align:middle;filter:invert(0.5);" />
+                </i>
+                <a href="https://github.com/AbhishekMitra-AIT" target="_blank" style="color:#3498db;text-decoration:none;">github.com/AbhishekMitra-AIT</a>
+            </div>
+            
+            <div class="lang-hobby">
+                <div class="section-title">LANGUAGES</div>
+                <div class="lang-hobby-item minus">Bangla</div>
+                <div class="lang-hobby-item minus">Hindi</div>
+                <div class="lang-hobby-item add">English</div>
+                
+                <div class="section-title" style="margin-top: 20px;">HOBBIES</div>
+                <div class="lang-hobby-item add">Cooking</div>
+                <div class="lang-hobby-item add">Running/Pranayam</div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="experience-section">
+                <div class="experience-title">EXPERIENCE</div>
+                
+                <div class="job">
+                    <div class="company">🔵 Vrisva Space Private Limited</div>
+                    <div class="job-title">STAFF ENGINEER - SOFTWARE DEVELOPMENT</div>
+                    <div class="duration">January 2025 - May 2025</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>
+                                Contributed to 
+                                <a href="https://github.com/AbhishekMitra-AIT/openpilot" target="_blank" style="color:#3498db;text-decoration:underline;">OpenPilot CI/CD pipelines</a>
+                                using GitHub Actions for automated testing, deployment, and integration workflows across multi-repository environments.
+                            </li>
+                            <li>Managed complex Git workflows including rebasing, branch management, pull requests, rollback-safe updates, and version tracking for collaborative development.</li>
+                            <li>Configured remote SSH access and key-based authentication for automotive embedded systems (Comma3X) enabling secure over-the-air debugging, deployment, and maintenance.</li>
+                            <li>Conducted real-time system validation using tools like Cabana, Replay, PlotJuggler for CAN message monitoring, vehicle telemetry analysis, and hardware-in-the-loop testing.</li>
+                            <li>Debugged live system integration issues such as CAN bus mismatches and safety-critical actuator failures, enhancing system stability and developer feedback.</li>
+                            <li>Automated DevOps tasks using shell scripting, improved cross-platform compatibility, and created deployment validation scripts.</li>
+                            <li>Coordinated with distributed global development teams via Teams, GitHub, and Discord, maintaining thorough documentation of issues and root cause analyses.</li>
+                        </ul>
+                        
+                        <strong>Project: 6-DOF Stewart Platform - ARDE Site Deployment</strong><br>
+                        Led on-site deployment and commissioning of a 6-DOF Stewart Platform motion simulator with precise motion control and sensor integration.
+                        <ul>
+                            <li>Configured and tested actuator system including motor cables, encoders, limit switches, and control panels.</li>
+                            <li>Implemented motion control with precision ±1mm/degrees and integrated IMU sensors and linear encoders for real-time feedback.</li>
+                            <li>Diagnosed and resolved actuator velocity mismatches, achieving high calibration accuracy and establishing safety protocols.</li>
+                            <li>Developed dual-interface GUI for Python-PLC integration for motion commands and validation.</li>
+                            <li>Coordinated remote troubleshooting with external PLC engineers and managed client communications and technical documentation.</li>
+                            <li>Overcame mechanical and control system challenges, meeting Acceptance Test Procedures for motion accuracy and safety.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="job">
+                    <div class="company">🔵 Aegeus Technologies Private Limited</div>
+                    <div class="job-title">DEVELOPMENT ENGINEER - ROBOTICS</div>
+                    <div class="duration">March 2023 - December 2024</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Designed and developed electronic circuits including motor drivers, reverse polarity protection, and control boards for Automated Guided Vehicles (AGV) focused on solar panel cleaning and warehouse logistics.</li>
+                            <li>Maintained communication with internal teams and external partners for continuous product feedback and improvement.</li>
+                            <li>Utilized programming languages and frameworks including Python, C/C++, ROS2, Arduino IDE, and various IDEs at an intermediate skill level.</li>
+                            <li>Developed skills in HTML/CSS, Django, computer vision, TensorFlow, and related technologies supporting autonomous driving initiatives.</li>
+                            <li>Worked with diverse hardware including Raspberry Pi (Pico/PicoW/Pi3), ESP32, STM32, Nvidia Jetson Nano, and multiple Arduino boards.</li>
+                            <li>Performed PCB design using Kicad 8.0 and completed online courses on automated and connected driving challenges.</li>
+                        </ul>
+                        
+                        <div class="key-projects">
+                            <h4>Key Projects:</h4>
+                            <ul>
+                                <li><strong>Control Panel (CP) Testing for Unicorn FullyAutomatic</strong> - Developed firmware and UI reducing fault by ~50% and cutting OPEX.</li>
+                                <li><strong>PCB and Firmware for Motor Binning</strong> - Designed testing PCB for motor RPM and current measurement; increasing efficiency by 300% and saving 75% time.</li>
+                                <li><strong>Remote Calibration Firmware for Shreem SemiAutomatic</strong> - Automated calibration saving 15-20 minutes per unit.</li>
+                                <li><strong>Troubleshooting Guide for Shreem SemiAutomatic</strong> - Reduced client support turnaround time by 1-3 days.</li>
+                                <li><strong>Technical Specification Document for Unicorn Robots</strong> - Maintained detailed, updated technical documentation to support product validation.</li>
+                                <li><strong>Extensive Module Testing for Sensors and Electronic Components</strong> using various microcontrollers, leading to 50-60% cost reduction through in-house development.</li>
+                                <li><strong>Continuous hardware and firmware improvements to Shreem SemiAutomatic</strong> including repositioning sensors, enhancing battery handling, adding encoders and IMU, and connector upgrades reducing breakdowns by 80-90%.</li>
+                                <li><strong>Online Operations & Maintenance tracker for Shreem robots</strong> enhancing issue tracking and reducing response times.</li>
+                                <li><strong>Image processing initiatives with Nvidia Jetson Nano</strong> using Python, C/C++, and Linux.</li>
+                                <li><strong>Headless Robotics development with Raspberry Pi and ROS2</strong> for autonomous navigation and remote control.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="job">
+                    <div class="company">🔵 Amazon Seller Service Private Limited (ASSPL)</div>
+                    <div class="job-title">PROJECT SPECIALIST - PHYSICAL SECURITY PROGRAM MANAGER (PSPM)</div>
+                    <div class="duration">April 2019 - April 2022</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Forecasted upcoming projects coordinating with cross-functional leadership for South & Central India.</li>
+                            <li>Reviewed and finalized site layouts for First Mile, Middle Mile, and Last Mile warehouses aligning with Security and Loss Prevention requirements.</li>
+                            <li>Shared forecasted data with operations and cross-functional teams ensuring resource availability.</li>
+                            <li>Managed materials and manpower during project execution until handover.</li>
+                            <li>Worked on projects across multiple warehouse sites including BLR8, SBCZ, BLR4, BRUD, BLRB, HYD8, HYD3, MAA4, MAA8, MMAA, Prime Now sites.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="job">
+                    <div class="company">🔵 Reliance Jio Infocomm Limited (RJIL)</div>
+                    <div class="job-title">PROJECT MANAGER AND OPERATIONS SUPPORT LEAD – SECURITY AND LOSS PREVENTION (SLP)</div>
+                    <div class="duration">September 2014 - April 2019</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Coordinated vendor installation and commissioning of electronic security, surveillance, and access control systems for network facilities.</li>
+                            <li>Provided operations and integration support for access control, CCTV surveillance, and attendance recording systems.</li>
+                            <li>Managed projects for multiple Internet Data Centres including Jamnagar, Navi Mumbai (RCP), Pune, and Nagpur.</li>
+                            <li>Led IPv6 implementation for access controllers across PAN India eNodeB sites.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="education">
+                <div class="experience-title">EDUCATION</div>
+                <div class="company">🔵 Army Institute of Technology, University of Pune, Maharashtra, India</div>
+                <div class="education-title">BACHELOR OF ENGINEERING IN ELECTRONICS AND TELECOMMUNICATION</div>
+                <div class="duration">2010 - 2014</div>
+            </div>
+            
+            <div class="experience-title">SKILLS</div>
+            <div class="skills-grid">
+                <div class="skill-item">Troubleshooting and Root Cause Analysis</div>
+                <div class="skill-item">Technical Documentation and Stakeholder Management</div>
+                <div class="skill-item">Project Management and Multi-disciplinary Team Coordination</div>
+                <div class="skill-item">Nvidia Jetson Nano, Raspberry Pi, STM32, ESP32, Arduino Platforms</div>
+                <div class="skill-item">Linux and Ubuntu Environments</div>
+                <div class="skill-item">Computer Vision and Image Processing</div>
+                <div class="skill-item">ROS2 and Robot Operating System</div>
+                <div class="skill-item">C/C++ Programming</div>
+                <div class="skill-item">Electronic Circuit Design and PCB Development</div>
+                <div class="skill-item">Robotics and Automation</div>
+                <div class="skill-item">GUI Development</div>
+                <div class="skill-item">PLC Integration and Control Systems</div>
+                <div class="skill-item">Python Programming</div>
+                <div class="skill-item">Motion Control Systems (6-DOF Stewart Platform)</div>
+                <div class="skill-item">Distributed Team Collaboration</div>
+                <div class="skill-item">DevOps Automation & Shell Scripting</div>
+                <div class="skill-item">Debugging & Integration of Safety-Critical Systems</div>
+                <div class="skill-item">Hardware-in-the-Loop Testing</div>
+                <div class="skill-item">Real-Time System Validation and Testing</div>
+                <div class="skill-item">Embedded Systems Configuration</div>
+                <div class="skill-item">Git Workflow & Version Control</div>
+                <div class="skill-item">CI/CD Pipeline Development</div>
+                <div class="skill-item">Software Development</div>
+            </div>
+        </div>
+    </div>
+    <!-- Print Resume Button -->
+    <div style="text-align:center; margin: 30px 0 0 0;">
+        <button onclick="window.print()" style="background:#3498db;color:white;border:none;padding:10px 24px;border-radius:6px;font-size:16px;cursor:pointer;box-shadow:0 2px 8px rgba(52,152,219,0.15);">
+            🖨️ Print Resume
+        </button>
+    </div>
+</body>
+</html>

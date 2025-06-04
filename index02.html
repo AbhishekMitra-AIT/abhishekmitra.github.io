@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Mitra - Program Analyst CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.4s; }
+        .section:nth-child(5) { animation-delay: 0.5s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #764ba2;
+            border-radius: 2px;
+        }
+
+        .profile-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            background: linear-gradient(135deg, #f8f9ff 0%, #fff 100%);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .experience-item {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .job-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-size: 1.1rem;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .duration {
+            font-size: 0.95rem;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .job-description {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .job-description h4 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+        }
+
+        .job-description ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .job-description li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .job-description li::marker {
+            color: #667eea;
+        }
+
+        .achievement {
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #27ae60;
+        }
+
+        .achievement strong {
+            color: #27ae60;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .skill-category h4 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .skill-category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-category li {
+            padding: 8px 0;
+            color: #555;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .skill-category li::before {
+            content: '▶';
+            color: #667eea;
+            position: absolute;
+            left: 0;
+            font-size: 0.8rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            background: linear-gradient(135deg, #f8f9ff 0%, #fff 100%);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .contact-item strong {
+            color: #2c3e50;
+            margin-right: 10px;
+        }
+
+        .contact-item a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+
+            .header {
+                padding: 25px;
+            }
+
+            .header h1 {
+                font-size: 2.2rem;
+            }
+
+            .content {
+                padding: 25px;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .print-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+                background: white;
+            }
+
+            .print-btn {
+                display: none;
+            }
+
+            .header {
+                background: #2c3e50 !important;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ABHISHEK MITRA</h1>
+            <div class="subtitle">Program Analyst & Operations Manager</div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">Profile</h2>
+                <div class="profile-text">
+                    Performance-oriented Program Analyst and Operations Manager with 10 years of experience in cross-functional project coordination, data-driven process optimization, and strategic resource allocation. Proven track record of managing multi-disciplinary teams, analyzing operational performance, and implementing process improvements that deliver measurable business impact across engineering and operations functions.
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Professional Experience</h2>
+
+                <div class="experience-item">
+                    <div class="job-title">Staff Engineer - Software Development & Program Operations</div>
+                    <div class="company">Vrisva Space Private Limited</div>
+                    <div class="duration">Jan 2025 - Present | Bengaluru, KA, IN</div>
+                    <div class="job-description">
+                        <h4>Program Management & Operations Analysis:</h4>
+                        <ul>
+                            <li><strong>Process Optimization:</strong> Analyzed and optimized CI/CD pipeline workflows, reducing deployment time by implementing automated testing and integration processes across multi-repository environments</li>
+                            <li><strong>Resource Allocation Management:</strong> Coordinated distributed global development teams using systematic project tracking through Teams, GitHub, and Discord platforms</li>
+                            <li><strong>Performance Monitoring & Reporting:</strong> Developed comprehensive system validation frameworks using specialized analytics tools (Cabana, Replay, PlotJuggler) for real-time performance monitoring and operational insights</li>
+                            <li><strong>Risk Management & Mitigation:</strong> Implemented systematic debugging protocols for critical system integration issues, improving system stability and reducing operational downtime</li>
+                            <li><strong>Documentation & Knowledge Management:</strong> Established standardized documentation processes for issue tracking, root-cause analysis, and solution implementation</li>
+                        </ul>
+                        <div class="achievement">
+                            <strong>Key Achievements:</strong> Enhanced developer feedback loops and system reliability through data-driven debugging approaches; Streamlined cross-platform compatibility processes, reducing deployment verification time by 40%; Established automated validation protocols that improved deployment success rates
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Program Manager & Technical Operations Lead</div>
+                    <div class="company">6-DOF Stewart Platform Project - ARDE Site Deployment</div>
+                    <div class="duration">April - May 2025</div>
+                    <div class="job-description">
+                        <h4>Program Overview:</h4>
+                        <p>Led comprehensive program management for multi-million dollar motion simulator deployment at Armament Research & Development Establishment (ARDE), coordinating cross-functional teams across hardware, software, and control systems integration.</p>
+                        
+                        <h4>Program Management & Business Operations:</h4>
+                        <ul>
+                            <li><strong>Stakeholder Management:</strong> Managed complex stakeholder relationships with ARDE officials, ensuring alignment between technical deliverables and client requirements</li>
+                            <li><strong>Resource Planning & Coordination:</strong> Orchestrated multi-disciplinary team resources including hardware integration specialists, software developers, and PLC control engineers</li>
+                            <li><strong>Risk Assessment & Mitigation:</strong> Conducted comprehensive risk analysis for safety-critical operations, implementing preventive protocols that eliminated potential project delays</li>
+                            <li><strong>Performance Metrics & Quality Assurance:</strong> Established precision requirements tracking (±0.05mm/degrees) with systematic validation processes ensuring ATP compliance</li>
+                            <li><strong>Vendor & Partner Coordination:</strong> Managed remote collaboration with distributed engineering teams and third-party PLC specialists</li>
+                        </ul>
+                        
+                        <div class="achievement">
+                            <strong>Operational Excellence Achievements:</strong> Cost Optimization through proactive issue resolution; Timeline Management with successful delivery within specified project timeline; Quality Standards exceeding client specifications; Process Innovation with dual-interface control systems
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Development Engineer - Program Operations & Product Development</div>
+                    <div class="company">Aegeus Technologies Private Limited</div>
+                    <div class="duration">March 2023 - Dec 2024 | Bengaluru, KA, IN</div>
+                    <div class="job-description">
+                        <h4>Program Analysis & Operations Management:</h4>
+                        <ul>
+                            <li><strong>Cross-Functional Coordination:</strong> Established communication frameworks with internal teams (Production, Operations, Quality) and external stakeholders (OEMs, Service Providers, Clients)</li>
+                            <li><strong>Process Improvement Programs:</strong> Led multiple process optimization initiatives resulting in significant operational improvements and cost reductions</li>
+                            <li><strong>Data-Driven Decision Making:</strong> Analyzed operational data to drive product development decisions for AGV solutions</li>
+                        </ul>
+
+                        <h4>Key Program Achievements:</h4>
+                        <div class="achievement">
+                            <strong>Quality Control Program:</strong> 50% reduction in post-production fault rates, substantially reducing operational and maintenance costs
+                        </div>
+                        <div class="achievement">
+                            <strong>Motor Quality Assurance Program:</strong> 300% efficiency increase, 75% time reduction in testing processes
+                        </div>
+                        <div class="achievement">
+                            <strong>Remote Calibration Process Optimization:</strong> 15-20 minute time savings per unit, eliminated manual record-keeping
+                        </div>
+                        <div class="achievement">
+                            <strong>Operations Support Documentation:</strong> Reduced support time from 7-10 days to 2-3 days
+                        </div>
+                        <div class="achievement">
+                            <strong>Product Enhancement Program:</strong> 80-90% reduction in product breakdowns, improved client trust with repeat orders
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Project Specialist - Physical Security Program Manager (PSPM)</div>
+                    <div class="company">Amazon Seller Service Private Limited (ASSPL)</div>
+                    <div class="duration">Apr 2019 - Apr 2022 | Bengaluru, KA, IN</div>
+                    <div class="job-description">
+                        <h4>Program Management & Strategic Planning:</h4>
+                        <ul>
+                            <li><strong>Demand Forecasting & Resource Planning:</strong> Analyzed and coordinated project forecasts from cross-functional leadership teams across South & Central Indian regions</li>
+                            <li><strong>Site Layout Optimization:</strong> Reviewed and optimized warehouse layouts ensuring alignment with Security and Loss Prevention (SLP) requirements</li>
+                            <li><strong>Stakeholder Coordination:</strong> Managed complex communication frameworks between SLP Operations, internal teams, and external partners</li>
+                            <li><strong>Resource Allocation Management:</strong> Coordinated materials and manpower allocation during project execution phases</li>
+                        </ul>
+                        <div class="achievement">
+                            <strong>Program Deliverables:</strong> Successfully managed security infrastructure programs across First Mile Facilities (BLR8, SBCZ, BLR4, BRUD, BLRB), Distribution Centers (HYD8, HYD3, MAA4, MAA8, MMAA), and Prime Now Sites
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Project Manager and Operations Support Lead – Security and Loss Prevention</div>
+                    <div class="company">Reliance Jio Infocomm Limited (RJIL)</div>
+                    <div class="duration">Sep 2014 - Apr 2019 | Navi Mumbai, MH, IN</div>
+                    <div class="job-description">
+                        <h4>Program Operations & Vendor Management:</h4>
+                        <ul>
+                            <li><strong>Vendor Coordination Programs:</strong> Managed installation and commissioning programs for Electronic Security, Surveillance, and Access Control across multiple facility categories</li>
+                            <li><strong>Operations Integration:</strong> Led integration programs for Access Control, CCTV Surveillance, and Attendance Recording systems</li>
+                            <li><strong>Multi-Site Program Management:</strong> Coordinated simultaneous programs across Small (eNodeB), Medium (AG2, ILA, NLD), and Large (IDC) facilities</li>
+                        </ul>
+                        <div class="achievement">
+                            <strong>Major Programs:</strong> Internet Data Centre implementations in Jamnagar, Navi Mumbai, and Nagpur; State Head Quarter setup in Pune; IPv6 Implementation across PAN India eNodeB sites
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Core Competencies</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Program Analysis & Management</h4>
+                        <ul>
+                            <li>Cross-functional team coordination and stakeholder management</li>
+                            <li>Resource allocation and strategic planning</li>
+                            <li>Risk assessment and mitigation strategies</li>
+                            <li>Performance monitoring and KPI tracking</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Data Analysis & Process Optimization</h4>
+                        <ul>
+                            <li>Operational data analysis and trend identification</li>
+                            <li>Process improvement implementation and measurement</li>
+                            <li>Quality assurance framework development</li>
+                            <li>Performance metrics establishment and tracking</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Business Operations</h4>
+                        <ul>
+                            <li>Vendor and partner relationship management</li>
+                            <li>Cost optimization and operational efficiency improvement</li>
+                            <li>Documentation and knowledge management systems</li>
+                            <li>Client relationship management and satisfaction improvement</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Technical Foundation</h4>
+                        <ul>
+                            <li><strong>Programming & Analysis:</strong> Python, C/C++, SQL-capable, Data Processing</li>
+                            <li><strong>Project Management:</strong> Multi-site coordination, Timeline management, Budget tracking</li>
+                            <li><strong>Systems & Platforms:</strong> Various business and technical systems integration</li>
+                            <li><strong>Documentation:</strong> Technical specification development, Process documentation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="experience-item">
+                    <div class="job-title">Bachelor in Engineering: Electronics and Telecommunication</div>
+                    <div class="company"><a href="https://www.aitpune.com/" target="_blank">Army Institute of Technology, University of Pune, MH </a>
+                     </div>
+                    <div class="duration">2010-2014 | First Class</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Contact Information</h2>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <strong>Phone:</strong> +919405014732
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email:</strong> <a href="mailto:abhishekmitra91@gmail.com">abhishekmitra91@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abhishek-mitra-61098260/" target="_blank">LinkedIn Profile</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>GitHub:</strong> <a href="https://github.com/AbhishekMitra-AIT" target="_blank">GitHub Profile</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Location:</strong> Bengaluru, Karnataka, IN
+                    </div>
+                    <div class="contact-item">
+                        <strong>Languages:</strong> English, Hindi, Bangla
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">🖨️ Print CV</button>
+
+    <script>
+        // Add smooth scrolling animation on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(function(section) {
+                observer.observe(section);
+            });
+
+            // Add hover effects for experience items
+            const experienceItems = document.querySelectorAll('.experience-item');
+            experienceItems.forEach(function(item) {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Add click-to-expand functionality for achievements
+            const achievements = document.querySelectorAll('.achievement');
+            achievements.forEach(function(achievement) {
+                achievement.addEventListener('click', function() {
+                    this.style.background = 'linear-gradient(135deg, #d5f4d5 0%, #e8f8e8 100%)';
+                    setTimeout(() => {
+                        this.style.background = 'linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%)';
+                    }, 500);
+                });
+            });
+        });
+
+        // Add print functionality with custom styling
+        function printCV() {
+            window.print();
+        }
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                printCV();
+            }
+        });
+    </script>
+</body>
+</html>
